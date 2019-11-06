@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -18,14 +19,20 @@ namespace Feedbacker
         }      
 
 
+        
+
+        private void Switch_Toggled(object sender, ToggledEventArgs e) 
+            => Analytics.SetEnabledAsync((sender as Switch).IsToggled);
+
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
 
         }
-
         private void TapGestureRecognizer_Tapped_2(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

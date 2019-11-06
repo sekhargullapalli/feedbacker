@@ -8,10 +8,10 @@
 
     <ContentPage.Resources>
         <StyleSheet Source="/Assets/styles.css" />
-    </ContentPage.Resources>
+    </ContentPage.Resources>   
+    
 
-    <Grid BackgroundColor="#1F1E26">
-        
+    <Grid BackgroundColor="#1F1E26">       
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>            
             <RowDefinition Height="100"/>
@@ -63,7 +63,7 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" FontSize="20" 
+                    <Label Grid.Row="0" Grid.Column="0" FontSize="18" 
                    HorizontalOptions="End" VerticalOptions="Center"
                Text="Send App Analytics?" TextColor="#D9D9D9">
                         <Label.FontFamily>
@@ -73,7 +73,7 @@
                         </Label.FontFamily>
                     </Label>
                     <Switch Grid.Row="0" Grid.Column="1" IsToggled="True" OnColor="LightSeaGreen" 
-                    ThumbColor="Beige" 
+                    ThumbColor="Beige" Toggled="Switch_Toggled" x:Name="SendSwitch"
                 HorizontalOptions="Start"/>
             </Grid>
                 
@@ -125,7 +125,7 @@
 
                     <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="18"
                        HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
-               Text="For simulating app crashes!" TextColor="#D9D9D9">
+               Text="For simulating application crashes!" TextColor="#D9D9D9">
                         <Label.FontFamily>
                             <OnPlatform x:TypeArguments="x:String">
                                 <On Platform="Android" Value="SairaCondensed-Medium.ttf#SairaCondensed-Medium" />
@@ -145,6 +145,10 @@
             </Frame>
             
         </Grid>
+        
+        
+        
+        
 
         <StackLayout x:Name="Footer" VerticalOptions="End" Grid.Row="1"              
                BackgroundColor="Black" Padding="10,5,5,5">
@@ -164,7 +168,7 @@
                        HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
                Text="GDPR" TextColor="#D9D9D9"/>                    
                 </Grid>
-                <Grid Margin="10,0,0,0">
+                <Grid Margin="20,0,0,0">
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
                     </Grid.GestureRecognizers>
