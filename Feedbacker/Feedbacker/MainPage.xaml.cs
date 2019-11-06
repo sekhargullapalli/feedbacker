@@ -8,14 +8,24 @@ using Xamarin.Forms;
 
 namespace Feedbacker
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+    
+    [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
+        }      
+
+
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TapGestureRecognizer_Tapped_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,11 +6,183 @@
              mc:Ignorable="d"
              x:Class="Feedbacker.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Resources>
+        <StyleSheet Source="/Assets/styles.css" />
+    </ContentPage.Resources>
+
+    <Grid BackgroundColor="#1F1E26">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>            
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Grid BackgroundColor="#1F1E26" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="130"/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="./dashboard2.png" HeightRequest="90" WidthRequest="90"
+                   MinimumHeightRequest="90" MinimumWidthRequest="90"
+               Grid.Row="0" Margin="20,10,0,0" HorizontalOptions="Start"/>
+
+            <Label x:Name="MainTitle" Text="Feedbacker"  Grid.Row="0" Grid.Column="1"
+               HorizontalOptions="Center" VerticalOptions="Center" Margin="10,0,0,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="PermanentMarker-Regular.ttf#PermanentMarker-Regular" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <Label Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" 
+               VerticalOptions="Center" FontSize="Large"
+               Text="Application Insights using Visual Studio App Center" TextColor="#D9D9D9">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="SairaCondensed-Medium.ttf#SairaCondensed-Medium" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <Frame Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="#0D0D0D" CornerRadius="20"
+                   HorizontalOptions="Fill" Margin="20,10,20,10" VerticalOptions="Fill">
+            
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill"
+             BackgroundColor="#0D0D0D">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" FontSize="20" 
+                   HorizontalOptions="End" VerticalOptions="Center"
+               Text="Send App Analytics?" TextColor="#D9D9D9">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="SairaCondensed-Medium.ttf#SairaCondensed-Medium" />
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <Switch Grid.Row="0" Grid.Column="1" IsToggled="True" OnColor="LightSeaGreen" 
+                    ThumbColor="Beige" 
+                HorizontalOptions="Start"/>
+            </Grid>
+                
+            </Frame>
+
+            <Frame Grid.Row="3" BackgroundColor="#0D0D0D" Grid.ColumnSpan="2" Margin="20,5,20,5" CornerRadius="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.ColumnSpan="3" FontSize="18"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+               Text="For tracking application events!" TextColor="#D9D9D9">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="SairaCondensed-Medium.ttf#SairaCondensed-Medium" />
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+
+                    <Button Text="Red" BackgroundColor="#A6020E" Grid.Row="1" Grid.Column="0"
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+                    <Button Text="Green" BackgroundColor="#4C7002" Grid.Row="1" Grid.Column="1" 
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+                    <Button Text="Blue" BackgroundColor="#2E74D1" Grid.Row="1" Grid.Column="2" 
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+
+                </Grid>
+
+            </Frame>
+            
+            <Frame Grid.Row="4" BackgroundColor="#0D0D0D" Grid.ColumnSpan="2" Margin="20,5,20,5" CornerRadius="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>                        
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>                        
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.ColumnSpan="2" FontSize="18"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+               Text="For simulating app crashes!" TextColor="#D9D9D9">
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="SairaCondensed-Medium.ttf#SairaCondensed-Medium" />
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <Button Text="Crash Type A" BackgroundColor="#6C757F" Grid.Row="1" Grid.Column="0"
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+
+                    <Button Text="Crash Type B" BackgroundColor="#6C757F" Grid.Row="1" Grid.Column="1" 
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+
+
+
+                </Grid>
+
+            </Frame>
+            
+        </Grid>
+
+        <StackLayout x:Name="Footer" VerticalOptions="End" Grid.Row="1"              
+               BackgroundColor="Black" Padding="10,5,5,5">
+            <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
+                <Grid x:Name="GDPRGrid">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Grid.GestureRecognizers>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="./privacy32.png" HeightRequest="36" WidthRequest="36"
+                               MinimumHeightRequest="36" MinimumWidthRequest="36"
+               Grid.Row="0" Margin="0,2,0,0" HorizontalOptions="Center"/>
+                    <Label Grid.Row="1" FontSize="12"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+               Text="GDPR" TextColor="#D9D9D9"/>                    
+                </Grid>
+                <Grid Margin="10,0,0,0">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Grid.GestureRecognizers>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="./about32.png" HeightRequest="40" WidthRequest="40"
+                               MinimumHeightRequest="40" MinimumWidthRequest="40"
+               Grid.Row="0" Margin="0,2,0,0" HorizontalOptions="Center"/>
+                    <Label Grid.Row="1" FontSize="12"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+               Text="INFO" TextColor="#D9D9D9"/>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+
+    </Grid>
+
 
 </ContentPage>
