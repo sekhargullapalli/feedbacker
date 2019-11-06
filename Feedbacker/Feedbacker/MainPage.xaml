@@ -102,11 +102,14 @@
                     </Label>
 
                     <Button Text="Red" BackgroundColor="#A6020E" Grid.Row="1" Grid.Column="0"
-                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"
+                            Command="{Binding RedCommand}" />
                     <Button Text="Green" BackgroundColor="#4C7002" Grid.Row="1" Grid.Column="1" 
-                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"
+                            Command="{Binding GreenCommand}" />
                     <Button Text="Blue" BackgroundColor="#2E74D1" Grid.Row="1" Grid.Column="2" 
-                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"
+                            Command="{Binding BlueCommand}" />
 
                 </Grid>
 
@@ -133,10 +136,12 @@
                         </Label.FontFamily>
                     </Label>
                     <Button Text="Crash Type A" BackgroundColor="#6C757F" Grid.Row="1" Grid.Column="0"
-                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"
+                            Command="{Binding CrashACommand}" />
 
                     <Button Text="Crash Type B" BackgroundColor="#6C757F" Grid.Row="1" Grid.Column="1" 
-                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"/>
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill"
+                            Command="{Binding CrashBCommand}"/>
 
 
 
