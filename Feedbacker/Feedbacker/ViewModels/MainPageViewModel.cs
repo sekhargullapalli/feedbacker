@@ -15,11 +15,22 @@ namespace Feedbacker.ViewModels
 
         public MainPageViewModel()
         {
+
+            //RedCommand = new Command(
+            //   execute: () =>
+            //   {
+            //       Analytics.TrackEvent("Color selected", new Dictionary<string, string> {
+            //            { "EventCategory", "Color" },
+            //            { "SelectedText", "Red"}
+            //       });
+            //   });
+
+
             RedCommand = new Command(
                execute: () =>
                {
                    Analytics.TrackEvent("Color selected", new Dictionary<string, string> {
-                        { "EventCategory", "Color" },
+                       { "EventCategory", "Color" },
                         { "SelectedText", "Red"}
                    });
                });
@@ -27,7 +38,7 @@ namespace Feedbacker.ViewModels
                 execute: () =>
                 {
                     Analytics.TrackEvent("Color selected", new Dictionary<string, string> {
-                        { "EventCategory", "Color" },
+                       { "EventCategory", "Color" },
                         { "SelectedText", "Green"}
                     });
                 });
@@ -35,7 +46,7 @@ namespace Feedbacker.ViewModels
                 execute: () =>
                 {
                     Analytics.TrackEvent("Color selected", new Dictionary<string, string> {
-                        { "EventCategory", "Color" },
+                       { "EventCategory", "Color" },
                         { "SelectedText", "Blue"}
                     });
                 });
@@ -44,6 +55,7 @@ namespace Feedbacker.ViewModels
             CrashACommand = new Command(
               execute: () =>
               {
+                  
                   Crashes.GenerateTestCrash();
               });
 
@@ -54,15 +66,15 @@ namespace Feedbacker.ViewModels
                    try
                    {
                        //Causing a divide by zero exception
-                       double denom = 0;
-                       double fraction = 1.0 / denom;
+                       int denom = 0;
+                       int fraction = 1 / denom;
                    }
                    catch (Exception exception)
                    {
                        var properties = new Dictionary<string, string>
                         {
-                            { "Category", "Music" },
-                            { "Wifi", "On"}
+                            { "Library", "Calculations" },
+                            { "Function", "Func1"}
                         };
                        Crashes.TrackError(exception, properties);
                    }

@@ -19,8 +19,10 @@ namespace Feedbacker
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=YOUR_APP_SECRET_HERE;",
-                  typeof(Analytics), typeof(Crashes));            
+            AppCenter.Start("android=APP_SECRET_KEY_HERE;",
+                  typeof(Analytics), typeof(Crashes));
+            Analytics.SetEnabledAsync(true);
+            Crashes.SetEnabledAsync(true);
         }
 
         protected override void OnSleep()
