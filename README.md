@@ -1,5 +1,5 @@
 # Feedbacker
 
-![Build Status](https://build.appcenter.ms/v0.1/apps/52decae9-86cf-4f11-a031-d276db75665c/branches/master/badge)
+![Build Status](https://build.appcenter.ms/v0.1/apps/11226f36-48d3-4eac-9264-4630b6f8bf48/branches/master/badge)
 
 Exploring the visual studio app cener
