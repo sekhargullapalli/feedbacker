@@ -110,10 +110,10 @@
                         CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill" x:Name="btnEvent1"
                             Command="{Binding RedCommand}" />
                     <Button Text="Green" BackgroundColor="#4C7002" Grid.Row="1" Grid.Column="1" 
-                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill" x:Name="btnEvent1"
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill" x:Name="btnEvent2"
                             Command="{Binding GreenCommand}" />
                     <Button Text="Blue" BackgroundColor="#2E74D1" Grid.Row="1" Grid.Column="2" 
-                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill" x:Name="btnEvent1"
+                        CornerRadius="10" Margin="5,5,5,5" HorizontalOptions="Fill" x:Name="btnEvent3"
                             Command="{Binding BlueCommand}" />
 
                 </Grid>
