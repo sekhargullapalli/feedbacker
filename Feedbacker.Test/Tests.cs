@@ -25,14 +25,8 @@ namespace Feedbacker.Test
         }
 
         [Test]
-        public void WelcomeTextIsDisplayed()
-        {
-            //AppResult[] results = app.WaitForElement(c => c.Button("Red"));
-
-            //app.Screenshot("Welcome screen.");
-
-            //Assert.IsTrue(results.Any());
-
+        public void AnalyticsTest()
+        {    
 
             AppResult[] results = app.WaitForElement(c => c.Button("Red"));
             for(int i = 2; i < 10; i++)
@@ -43,9 +37,7 @@ namespace Feedbacker.Test
                     app.Tap(c => c.Button("Blue"));
                 if (i % 4 == 0)
                     app.Tap(c => c.Button("Green"));
-
             }
-
             Assert.IsTrue(results.Any());
         }
     }

@@ -12,19 +12,24 @@ namespace Feedbacker.Test
             if (platform == Platform.Android)
             {
 
-                var path = System.AppDomain.CurrentDomain.BaseDirectory;
+                //var path = System.AppDomain.CurrentDomain.BaseDirectory;
 
-                path = Directory.GetParent(path).Parent.Parent.Parent.FullName;
-                path = Path.Combine(path, "Feedbacker/Feedbacker.Android/bin/Release/com.companyname.feedbacker-Signed.apk");
+                //path = Directory.GetParent(path).Parent.Parent.Parent.FullName;
+                //path = Path.Combine(path, "Feedbacker/Feedbacker.Android/bin/Release/com.companyname.feedbacker-Signed.apk");
+
+                //return ConfigureApp
+                //    .Android
+                //    .EnableLocalScreenshots()
+                //    .ApkFile(path)
+                //    .StartApp();                
 
                 return ConfigureApp
                     .Android
-                    .EnableLocalScreenshots()
-                    .ApkFile(path)
+                    .EnableLocalScreenshots()                    
                     .StartApp();
 
 
-                
+
             }
 
             return ConfigureApp.iOS.StartApp();
