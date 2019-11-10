@@ -19,7 +19,7 @@ namespace Feedbacker
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=YOUR_APP_CENTER_APP_SECRET;",
+            AppCenter.Start("android=YOUR_APP_SECRET_HERE;",
                   typeof(Analytics), typeof(Crashes));
             Analytics.SetEnabledAsync(true);
             Crashes.SetEnabledAsync(true);
